@@ -1,0 +1,27 @@
+.table-row:hover {
+    background-color: rgb(226, 226, 226);
+    cursor: pointer;
+}
+
+.custom-progress-bar {
+    margin-top: 5%;
+}
+
+.custom-progress-bar>h3 {
+    text-align: center;
+}
+
+.custom-icon-btn {
+    display: flex;
+    align-items: center;
+}
+
+.custom-icon-btn>p {
+    margin-bottom: 0px;
+}
+
+.filter-form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}

@@ -1,0 +1,59 @@
+<div>
+    <h1 style="text-align: center;">Detalhes do Usuário</h1>
+    <mat-card>
+        <div class="action-card-header">
+            <div>
+                <mat-chip-list>
+                    <mat-chip class="active-color" *ngIf="user.ativo" selected>Ativo</mat-chip>
+                    <mat-chip class="inactive-color" *ngIf="!user.ativo" selected>Inativo</mat-chip>
+                </mat-chip-list>
+            </div>
+            <div>
+                <button mat-mini-fab color="secondary" style="margin-right: 8px;" (click)="editUser()">
+                    <mat-icon>create</mat-icon>
+                </button>
+                <button mat-mini-fab color="warn" style="margin-right: 8px;" (click)="deleteUser(user._id, user.nome)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+                <button mat-mini-fab color="secondary" (click)="returnToList()">
+                    <mat-icon>clear</mat-icon>
+                </button>
+            </div>
+        </div>
+        <mat-card-content>
+            <div style="display: flex; flex-direction: row;">
+                <div class="basic-data">
+                    <h2>Dados Pessoais</h2>
+                    <hr class="hr-divider" />
+                    <p class="capitalize"><strong>Nome:</strong> {{user.nome + ' ' + user.sobrenome}}</p>
+                    <p><strong>Data de Nascimento:</strong> {{user.data_nascimento | date: 'dd/MM/yyyy'}}</p>
+                    <p><strong>E-mail:</strong> {{user.email}}</p>
+                    <div class="group">
+                        <p><strong>CPF:</strong> {{user.cpf | mask: '000.000.000-00'}}</p>
+                        <p><strong>RG:</strong> {{user.rg}}</p>
+                    </div>
+                    <div class="group">
+                        <p><strong>Telefone:</strong> {{user.telefone | mask:'(00) 0000-0000'}}</p>
+                        <p><strong>Celular:</strong> {{user.celular | mask:'(00) 00000-0000'}}</p>
+                    </div>
+                </div>
+                <div class="basic-data capitalize">
+                    <h2>Endereço</h2>
+                    <hr style="border-width: 2px;" />
+                    <p><strong>CEP: </strong>{{user.cep| mask: '00000-000'}}</p>
+                    <p><strong>Endereço: </strong>{{user.endereco}}</p>
+                    <div class="group">
+                        <p><strong>Número: </strong>{{user.numero}}</p>
+                        <p><strong>Complemento: </strong>{{user.complemento}}</p>
+                        <p><strong>Bairro: </strong>{{user.bairro}}</p>
+                    </div>
+                    <div class="group ">
+                        <p><strong>Cidade: </strong>{{user.cidade}}</p>
+                        <p class="uppercase"><strong>UF: </strong>{{user.uf}}</p>
+                    </div>
+
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

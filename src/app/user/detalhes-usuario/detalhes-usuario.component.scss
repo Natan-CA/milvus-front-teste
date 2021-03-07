@@ -1,0 +1,44 @@
+.action-card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.basic-data {
+    width: 50%;
+    font-size: 15px;
+}
+
+.group {
+    display: flex;
+}
+
+.group>p {
+    margin-right: 10px;
+}
+
+.mat-chip {
+    color: white;
+    font-size: 16px;
+    letter-spacing: normal;
+}
+
+.active-color {
+    background-color: green !important;
+}
+
+.inactive-color {
+    background-color: red !important;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.hr-divider {
+    border-width: 2px;
+    margin-right: 15px;
+}
